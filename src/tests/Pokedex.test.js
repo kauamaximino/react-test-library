@@ -50,4 +50,11 @@ describe('Testa o componente Pokedex', () => {
     expect(buttonsFilters[5]).toHaveTextContent(/normal/i);
     expect(buttonsFilters[6]).toHaveTextContent(/dragon/i);
   });
+
+  it('Testa se a Pokédex contém um botão para resetar o filtro', () => {
+    renderWithRouter(<App />);
+
+    const btnAll = screen.getByText(/all/i);
+    userEvent.click(btnAll);
+  });
 });
