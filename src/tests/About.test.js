@@ -28,7 +28,6 @@ describe('Testa o componente About', () => {
     renderWithRouter(<About />);
     const urlImage = 'https://cdn2.bulbagarden.net/upload/thumb/8/86/Gen_I_Pok%C3%A9dex.png/800px-Gen_I_Pok%C3%A9dex.png';
     const imgAbout = screen.getByRole('img');
-    console.log(imgAbout);
     expect(imgAbout.src).toBe(urlImage);
   });
 });
